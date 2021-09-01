@@ -5,15 +5,17 @@ import Layout from "../components/layout"
 import Hero from "../components/hero"
 import About from '../components/about'
 import Project from "../components/project"
-import Skills from "../components/skills"
+// import Skills from "../components/skills"
+import Footer from "../components/footer"
 
 const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Hero content={data.hero.edges} />
-      <Project content={data.project.edges} />
-      <Skills content={data.skills.edges} />
       <About content={data.about.edges} />
+      <Project content={data.project.edges} />
+      {/* <Skills content={data.skills.edges} /> */}
+      <Footer content={data.footer.edges} />
     </Layout>
   )
 }
@@ -29,6 +31,7 @@ export const pageQuery = graphql`
           frontmatter {
             intro
             title
+            subtitle
           }
         }
       }
@@ -39,6 +42,7 @@ export const pageQuery = graphql`
           body
           frontmatter {
             title
+            technologies
             caption
             image {
               childImageSharp {
@@ -51,11 +55,24 @@ export const pageQuery = graphql`
         }
       }
     },
-    skills: allMdx(filter: { fileAbsolutePath: { regex: "/skills/" } }) {
+    # skills: allMdx(filter: { fileAbsolutePath: { regex: "/skills/" } }) {
+    #   edges {
+    #     node {
+    #       frontmatter {
+    #         title
+    #       }
+    #     }
+    #   }
+    # },
+    footer: allMdx(filter: { fileAbsolutePath: { regex: "/footer/" } }) {
       edges {
         node {
+          body
           frontmatter {
-            title
+            github
+            resume
+            linkedIn
+            email
           }
         }
       }

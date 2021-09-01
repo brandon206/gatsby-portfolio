@@ -5,14 +5,17 @@ import Img from "gatsby-image"
 
 const Project = ({ content }) => {
   return (
-    <section id="projects" className="my-8 w-3/5 mx-auto">
+    <section id="projects" className="my-8 w-4/5 mx-auto">
       {content.map((project, key) => {
         const { body, frontmatter } = project.node
 
         return (
-          <div className="py-8 flex" key={frontmatter.position}>
-            <div className="w-1/3">
-              <h1 className="text-xs font-bold uppercase text-red-500">
+          <div className="py-8 flex flex-col md:flex-row" key={frontmatter.position}>
+            <div className="w-full py-6">
+              <Img fluid={frontmatter.screenshot.childImageSharp.fluid} />
+            </div>
+            <div className="md:w-1/3">
+              <h1 className="text-xs font-bold uppercase text-secondary text-center md:text-left">
                 {frontmatter.category}
               </h1>
               <h2 className="text-3xl font-bold mb-6">{frontmatter.title}</h2>
@@ -21,7 +24,7 @@ const Project = ({ content }) => {
                   <MDXRenderer>{body}</MDXRenderer>
                   <div className="flex text-sm font-bold text-red-500 ">
                     {frontmatter.tags.map((tag, key) => {
-                      return <p className="mr-2 mt-6">{tag}</p>
+                      return <p className="mr-2 mt-6 text-secondary">{tag}</p>
                     })}
                   </div>
                   <div className="flex mt-4">
@@ -34,9 +37,6 @@ const Project = ({ content }) => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full py-6">
-              <Img fluid={frontmatter.screenshot.childImageSharp.fluid} />
             </div>
           </div>
         )
