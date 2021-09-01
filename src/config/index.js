@@ -3,7 +3,7 @@
 module.exports = {
     author: "Brandon Park",
     siteTitle: "Brandon Park - Portfolio",
-    siteShortTitle: "BP",
+    siteShortTitle: "bpark",
     siteDescription:
       "v2 personal portfolio. Brandon is a Full Stack Developer and based in Orange County, CA",
     siteLanguage: "en_US",
@@ -38,10 +38,6 @@ module.exports = {
         {
           name: "Projects",
           url: "/#projects",
-        },
-        {
-          name: "Skills",
-          url: "/#skills",
         },
         {
           name: "Contact",
