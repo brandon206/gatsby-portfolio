@@ -11,28 +11,28 @@ const Project = ({ content }) => {
 
         return (
           <div className="py-8 flex flex-col md:flex-row" key={frontmatter.position}>
-            <div className="w-full py-6">
+            <div className="w-full md:w-1/2 py-6">
               <Img fluid={frontmatter.screenshot.childImageSharp.fluid} />
             </div>
-            <div className="md:w-1/3">
+            <div className="w-full p-6 md:w-1/2">
               <h1 className="text-xs font-bold uppercase text-secondary text-center md:text-left">
                 {frontmatter.category}
               </h1>
-              <h2 className="text-3xl font-bold mb-6">{frontmatter.title}</h2>
+              <h2 className="text-3xl font-bold mb-6 text-center md:text-left">{frontmatter.title}</h2>
               <div className=" font-light text-lg flex justify-between">
-                <div>
+                <div className="w-full">
                   <MDXRenderer>{body}</MDXRenderer>
-                  <div className="flex text-sm font-bold text-red-500 ">
+                  <div className="flex text-sm font-bold flex-wrap">
                     {frontmatter.tags.map((tag, key) => {
-                      return <p className="mr-2 mt-6 text-secondary">{tag}</p>
+                      return <p className="pr-2 m-0 text-secondary">{tag}</p>
                     })}
                   </div>
                   <div className="flex mt-4">
-                    <a href={frontmatter.github} className="w-8 h-8 mr-4">
+                    <a href={frontmatter.github} target="_blank" className="w-8 h-8 mr-4">
                       <Icon name="github" />
                     </a>
-                    <a href={frontmatter.external} className="w-8 h-8">
-                      <Icon name="external" />
+                    <a href={frontmatter.external} target="_blank" className="w-8 h-8">
+                      <Icon name="external-link" />
                     </a>
                   </div>
                 </div>

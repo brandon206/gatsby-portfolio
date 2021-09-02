@@ -14,7 +14,7 @@ const Footer = ({ content }) => {
   const { frontmatter, body } = content[0].node;
   return (
     <FooterWrapper className="py-6 px-12">
-      <div style={{ margin: "0 auto" }} className="container w-full flex flex-col md:flex-row md:justify-start items-center">
+      <div style={{ margin: "0 auto" }} id="contact" className="container w-full flex flex-col md:flex-row md:justify-start items-center">
         <div className="w-full md:w-1/2 text-center md:text-left">
           <MDXRenderer>{body}</MDXRenderer>
         </div>
