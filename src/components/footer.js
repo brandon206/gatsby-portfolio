@@ -19,13 +19,13 @@ const Footer = ({ content }) => {
           <MDXRenderer>{body}</MDXRenderer>
         </div>
         <div className="flex w-full justify-center md:w-1/2 md:justify-end text-center items-center">
-          <a href={frontmatter.github} target="_blank" className="w-8 h-8 mr-4">
+          <a href={frontmatter.github} className="w-8 h-8 mr-4">
             <Icon name="github" />
           </a>
-          <a href={frontmatter.linkedIn} target="_blank" className="w-8 h-8 mr-4">
+          <a href={frontmatter.linkedIn} className="w-8 h-8 mr-4">
             <Icon name="linkedin" />
           </a>
-          <a href={frontmatter.resume} target="_blank" className="w-8 h-8 mr-4">
+          <a href={frontmatter.resume} className="w-8 h-8 mr-4">
             <Icon name="resume" />
           </a>
           <a href={frontmatter.email} className="w-8 h-8 mr-4">
