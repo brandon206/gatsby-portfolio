@@ -5,6 +5,7 @@ import IconGithub from "./Github"
 import IconLinkedIn from "./LinkedIn"
 import IconResume from "./Resume"
 import IconEmail from "./Email"
+import IconExternalLink from "./ExternalLink"
 
 const Icon = ({ name, color }) => {
   switch (name.toLowerCase()) {
@@ -16,6 +17,8 @@ const Icon = ({ name, color }) => {
       return <IconResume color={color} />
     case "email":
       return <IconEmail color={color} />
+    case "external-link":
+      return <IconExternalLink color={color} />
     default:
       return null
   }

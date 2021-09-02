@@ -10,7 +10,7 @@ const Hero = ({ content }) => {
   return (
     <div className="flex items-center shadow-inner min-h-screen flex-col md:flex-row">
       <div className="w-full py-6 shadow-lg">
-        <section class="mx-auto container w-4/5">
+        <section class="my-6 mx-auto container w-4/5">
           <h1 className="uppercase font-bold text-lg text-secondary">
             {frontmatter.intro}
           </h1>

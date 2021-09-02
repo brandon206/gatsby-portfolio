@@ -53,9 +53,9 @@ const NavbarLinks = ({ navbarOpen, setNavbarOpen }) => {
       <NavItem onClick={handleLinkClick} to="#about">
         About
       </NavItem>
-      <NavItem onClick={handleLinkClick} to="#experience">
+      {/* <NavItem onClick={handleLinkClick} to="#experience">
         Experience
-      </NavItem>
+      </NavItem> */}
       <NavItem onClick={handleLinkClick} to="#projects">
         Projects
       </NavItem>
